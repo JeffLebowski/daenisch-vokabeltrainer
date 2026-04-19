@@ -1,0 +1,1 @@
+# Dänisch Vokabeltrainer\n\nGeneriert eine MP3-Audiodatei aus dänischen Vokabeln.\n\n## Voraussetzungen\n```\npip install gtts pydub\n```\nAußerdem ffmpeg (brew/apt/choco install ffmpeg).\n\n## Verwendung\n```\npython create_audio.py\n```

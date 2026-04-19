@@ -1,0 +1,716 @@
+[
+  {
+    "comment": "=== LEKTION 14: Wohnen ===",
+    "de": null, "da": null, "formen": null
+  },
+  {
+    "comment": "--- Sektion 1: Wohnungstypen ---",
+    "de": null, "da": null, "formen": null
+  },
+  {
+    "de": "Wohnung",
+    "da": "bolig",
+    "typ": "substantiv",
+    "formen": ["bolig", "boligen", "boliger", "boligerne"]
+  },
+  {
+    "de": "Einfamilienhaus, Eigenheim",
+    "da": "parcelhus",
+    "typ": "substantiv",
+    "formen": ["parcelhus", "parcelhuset", "parcelhuse", "parcelhusene"]
+  },
+  {
+    "de": "Etagenwohnung",
+    "da": "etagebolig",
+    "typ": "substantiv",
+    "formen": ["etagebolig", "etageboligen", "etageboliger", "etageboligerne"]
+  },
+  {
+    "de": "Reihenhaus",
+    "da": "rækkehus",
+    "typ": "substantiv",
+    "formen": ["rækkehus", "rækkehuset", "rækkehuse", "rækkehusene"]
+  },
+  {
+    "de": "Doppelhaus",
+    "da": "dobbelthus",
+    "typ": "substantiv",
+    "formen": ["dobbelthus", "dobbelthuset", "dobbelthuse", "dobbelthusene"]
+  },
+  {
+    "de": "Hof",
+    "da": "gård",
+    "typ": "substantiv",
+    "formen": ["gård", "gården", "gårde", "gårdene"]
+  },
+  {
+    "de": "Wohnung, Appartement",
+    "da": "lejlighed",
+    "typ": "substantiv",
+    "formen": ["lejlighed", "lejligheden", "lejligheder", "lejlighederne"]
+  },
+  {
+    "de": "Teil, Anteil",
+    "da": "del",
+    "typ": "substantiv",
+    "formen": ["del", "delen", "dele", "delene"]
+  },
+  {
+    "comment": "--- Sektion 2: Räume ---",
+    "de": null, "da": null, "formen": null
+  },
+  {
+    "de": "Wohnzimmer",
+    "da": "dagligstue",
+    "typ": "substantiv",
+    "formen": ["dagligstue", "dagligstuen", "dagligstuer", "dagligstuerne"]
+  },
+  {
+    "de": "Ausgang",
+    "da": "udgang",
+    "typ": "substantiv",
+    "formen": ["udgang", "udgangen", "udgange", "udgangene"]
+  },
+  {
+    "de": "Terrasse",
+    "da": "terrasse",
+    "typ": "substantiv",
+    "formen": ["terrasse", "terrassen", "terrasser", "terrasserne"]
+  },
+  {
+    "de": "hell",
+    "da": "lys",
+    "typ": "adjektiv",
+    "formen": []
+  },
+  {
+    "de": "Fußbodenheizung",
+    "da": "gulvvarme",
+    "typ": "substantiv",
+    "formen": ["gulvvarme", "gulvvarmen"]
+  },
+  {
+    "de": "Baujahr",
+    "da": "byggeår",
+    "typ": "substantiv",
+    "formen": ["byggeår", "byggeåret", "byggeår", "byggeårene"]
+  },
+  {
+    "de": "Miete",
+    "da": "husleje",
+    "typ": "substantiv",
+    "formen": ["husleje", "huslejen"]
+  },
+  {
+    "de": "Monat",
+    "da": "måned",
+    "typ": "substantiv",
+    "formen": ["måned", "måneden", "måneder", "månederne"]
+  },
+  {
+    "de": "Schlafzimmer",
+    "da": "soveværelse",
+    "typ": "substantiv",
+    "formen": ["soveværelse", "soveværelset", "soveværelser", "soveværelserne"]
+  },
+  {
+    "de": "Esszimmer",
+    "da": "spisestue",
+    "typ": "substantiv",
+    "formen": ["spisestue", "spisestuen", "spisestuer", "spisestuerne"]
+  },
+  {
+    "de": "Kinderzimmer",
+    "da": "børneværelse",
+    "typ": "substantiv",
+    "formen": ["børneværelse", "børneværelset", "børneværelser", "børneværelserne"]
+  },
+  {
+    "de": "Flur, Diele",
+    "da": "entré",
+    "typ": "substantiv",
+    "formen": ["entré", "entréen", "entréer", "entréerne"]
+  },
+  {
+    "de": "Arbeitszimmer",
+    "da": "arbejdsværelse",
+    "typ": "substantiv",
+    "formen": ["arbejdsværelse", "arbejdsværelset", "arbejdsværelser", "arbejdsværelserne"]
+  },
+  {
+    "de": "Balkon",
+    "da": "altan",
+    "typ": "substantiv",
+    "formen": ["altan", "altanen", "altaner", "altanerne"]
+  },
+  {
+    "de": "Toilette",
+    "da": "toilet",
+    "typ": "substantiv",
+    "formen": ["toilet", "toilettet", "toiletter", "toiletterne"]
+  },
+  {
+    "de": "Abstellraum, Rumpelkammer",
+    "da": "pulterrum",
+    "typ": "substantiv",
+    "formen": ["pulterrum", "pulterrummet", "pulterrum", "pulterrummene"]
+  },
+  {
+    "de": "Waschküche",
+    "da": "bryggers",
+    "typ": "substantiv",
+    "formen": ["bryggers", "bryggerset", "bryggersere", "bryggerserne"]
+  },
+  {
+    "de": "Hobbyraum",
+    "da": "hobbyrum",
+    "typ": "substantiv",
+    "formen": ["hobbyrum", "hobbyrummet", "hobbyrum", "hobbyrummene"]
+  },
+  {
+    "de": "Wohnküche",
+    "da": "køkken-alrum",
+    "typ": "substantiv",
+    "formen": ["køkken-alrum", "køkken-alrummet"]
+  },
+  {
+    "de": "Keller",
+    "da": "kælder",
+    "typ": "substantiv",
+    "formen": ["kælder", "kælderen", "kældre", "kældrene"]
+  },
+  {
+    "de": "Garage",
+    "da": "garage",
+    "typ": "substantiv",
+    "formen": ["garage", "garagen", "garager", "garagerne"]
+  },
+  {
+    "de": "zentral",
+    "da": "central",
+    "typ": "sonstig",
+    "formen": []
+  },
+  {
+    "de": "Stadtrand",
+    "da": "udkanten af byen",
+    "typ": "sonstig",
+    "formen": []
+  },
+  {
+    "comment": "--- Sektion 3: Komparativ ---",
+    "de": null, "da": null, "formen": null
+  },
+  {
+    "de": "weniger",
+    "da": "mindre",
+    "typ": "sonstig",
+    "formen": []
+  },
+  {
+    "de": "als",
+    "da": "end",
+    "typ": "sonstig",
+    "formen": []
+  },
+  {
+    "de": "genauso, ebenso",
+    "da": "lige så",
+    "typ": "sonstig",
+    "formen": []
+  },
+  {
+    "de": "wie",
+    "da": "som",
+    "typ": "sonstig",
+    "formen": []
+  },
+  {
+    "de": "dunkel",
+    "da": "mørk",
+    "typ": "adjektiv",
+    "formen": []
+  },
+  {
+    "comment": "--- Sektion 4: Verben und Ausdrücke ---",
+    "de": null, "da": null, "formen": null
+  },
+  {
+    "de": "sich beeilen",
+    "da": "at skynde sig",
+    "typ": "verb",
+    "formen": ["at skynde sig", "skynder sig", "skyndte sig", "har skyndt sig"]
+  },
+  {
+    "de": "Termin, Zeit",
+    "da": "tid",
+    "typ": "substantiv",
+    "formen": ["tid", "tiden", "tider", "tiderne"]
+  },
+  {
+    "de": "wohin",
+    "da": "hvorhen",
+    "typ": "sonstig",
+    "formen": []
+  },
+  {
+    "de": "von etwas träumen",
+    "da": "at drømme om noget",
+    "typ": "verb",
+    "formen": ["at drømme om noget", "drømmer om noget", "drømte om noget", "har drømt om noget"]
+  },
+  {
+    "de": "finden",
+    "da": "at finde",
+    "typ": "verb",
+    "formen": ["at finde", "finder", "fandt", "har fundet"]
+  },
+  {
+    "de": "Fenster",
+    "da": "vindue",
+    "typ": "substantiv",
+    "formen": ["vindue", "vinduet", "vinduer", "vinduerne"]
+  },
+  {
+    "de": "Zugang",
+    "da": "adgang",
+    "typ": "substantiv",
+    "formen": ["adgang", "adgangen", "adgange", "adgangene"]
+  },
+  {
+    "de": "ich hätte gerne",
+    "da": "jeg kunne godt tænke mig",
+    "typ": "sonstig",
+    "formen": []
+  },
+  {
+    "de": "denken",
+    "da": "at tænke",
+    "typ": "verb",
+    "formen": ["at tænke", "tænker", "tænkte", "har tænkt"]
+  },
+  {
+    "de": "nach, in Richtung",
+    "da": "mod",
+    "typ": "sonstig",
+    "formen": []
+  },
+  {
+    "de": "Norden",
+    "da": "nord",
+    "typ": "sonstig",
+    "formen": []
+  },
+  {
+    "de": "so um drei Uhr",
+    "da": "sådan ved tretiden",
+    "typ": "sonstig",
+    "formen": []
+  },
+  {
+    "comment": "--- Sektion 6: Möbel ---",
+    "de": null, "da": null, "formen": null
+  },
+  {
+    "de": "Möbel",
+    "da": "møbel",
+    "typ": "substantiv",
+    "formen": ["møbel", "møblet", "møbler", "møblerne"]
+  },
+  {
+    "de": "Regal",
+    "da": "reol",
+    "typ": "substantiv",
+    "formen": ["reol", "reolen", "reoler", "reolerne"]
+  },
+  {
+    "de": "Sofa",
+    "da": "sofa",
+    "typ": "substantiv",
+    "formen": ["sofa", "sofaen", "sofaer", "sofaerne"]
+  },
+  {
+    "de": "Schrank",
+    "da": "skab",
+    "typ": "substantiv",
+    "formen": ["skab", "skabet", "skabe", "skabene"]
+  },
+  {
+    "de": "Sessel",
+    "da": "lænestol",
+    "typ": "substantiv",
+    "formen": ["lænestol", "lænestolen", "lænestole", "lænestolene"]
+  },
+  {
+    "de": "Topfpflanze",
+    "da": "potteplante",
+    "typ": "substantiv",
+    "formen": ["potteplante", "potteplanten", "potteplanter", "potteplanterne"]
+  },
+  {
+    "de": "Teppich",
+    "da": "tæppe",
+    "typ": "substantiv",
+    "formen": ["tæppe", "tæppet", "tæpper", "tæpperne"]
+  },
+  {
+    "de": "Lampe",
+    "da": "lampe",
+    "typ": "substantiv",
+    "formen": ["lampe", "lampen", "lamper", "lamperne"]
+  },
+  {
+    "de": "Musikanlage",
+    "da": "musiksystem",
+    "typ": "substantiv",
+    "formen": ["musiksystem", "musiksystemet", "musiksystemer", "musiksystemerne"]
+  },
+  {
+    "de": "Esstisch",
+    "da": "spisebord",
+    "typ": "substantiv",
+    "formen": ["spisebord", "spisebordet", "spiseborde", "spisebordene"]
+  },
+  {
+    "de": "Schreibtisch",
+    "da": "skrivebord",
+    "typ": "substantiv",
+    "formen": ["skrivebord", "skrivebordet", "skriveborde", "skrivebordene"]
+  },
+  {
+    "comment": "=== LEKTION 15: Wetter und Verkehr ===",
+    "de": null, "da": null, "formen": null
+  },
+  {
+    "comment": "--- Einleitungsvokabeln ---",
+    "de": null, "da": null, "formen": null
+  },
+  {
+    "de": "Busch",
+    "da": "busk",
+    "typ": "substantiv",
+    "formen": ["busk", "busken", "buske", "buskene"]
+  },
+  {
+    "de": "Hühnerhof",
+    "da": "hønsegård",
+    "typ": "substantiv",
+    "formen": ["hønsegård", "hønsegården", "hønsegårde", "hønsegårdene"]
+  },
+  {
+    "de": "Lage, Standort",
+    "da": "beliggenhed",
+    "typ": "substantiv",
+    "formen": ["beliggenhed", "beliggenheden"]
+  },
+  {
+    "de": "Welt",
+    "da": "verden",
+    "typ": "substantiv",
+    "formen": ["verden", "verdenen"]
+  },
+  {
+    "de": "vor allem, in erster Linie",
+    "da": "først og fremmest",
+    "typ": "sonstig",
+    "formen": []
+  },
+  {
+    "de": "Erfindung",
+    "da": "opfindelse",
+    "typ": "substantiv",
+    "formen": ["opfindelse", "opfindelsen", "opfindelser", "opfindelserne"]
+  },
+  {
+    "de": "gleichfalls, ebenfalls",
+    "da": "ligeledes",
+    "typ": "sonstig",
+    "formen": []
+  },
+  {
+    "comment": "--- Sektion 1: Wetter ---",
+    "de": null, "da": null, "formen": null
+  },
+  {
+    "de": "Gewitter",
+    "da": "tordenvejr",
+    "typ": "substantiv",
+    "formen": ["tordenvejr", "tordenvejret"]
+  },
+  {
+    "de": "es sich gemütlich machen",
+    "da": "at hygge sig",
+    "typ": "verb",
+    "formen": ["at hygge sig", "hygger sig", "hyggede sig", "har hygget sig"]
+  },
+  {
+    "de": "wehen, blasen",
+    "da": "at blæse",
+    "typ": "verb",
+    "formen": ["at blæse", "blæser", "blæste", "har blæst"]
+  },
+  {
+    "de": "frieren",
+    "da": "at fryse",
+    "typ": "verb",
+    "formen": ["at fryse", "fryser", "frøs", "har frosset"]
+  },
+  {
+    "de": "donnern",
+    "da": "at tordne",
+    "typ": "verb",
+    "formen": ["at tordne", "tordner", "tordnede", "har tordnet"]
+  },
+  {
+    "de": "stark bewölkt",
+    "da": "overskylet",
+    "typ": "adjektiv",
+    "formen": []
+  },
+  {
+    "de": "Sonne",
+    "da": "sol",
+    "typ": "substantiv",
+    "formen": ["sol", "solen"]
+  },
+  {
+    "de": "scheinen",
+    "da": "at skinne",
+    "typ": "verb",
+    "formen": ["at skinne", "skinner", "skinnede", "har skinnet"]
+  },
+  {
+    "de": "neblig",
+    "da": "tåget",
+    "typ": "adjektiv",
+    "formen": []
+  },
+  {
+    "de": "stürmen",
+    "da": "at storme",
+    "typ": "verb",
+    "formen": ["at storme", "stormer", "stormede", "har stormet"]
+  },
+  {
+    "de": "tauen",
+    "da": "at tø",
+    "typ": "verb",
+    "formen": ["at tø", "tør", "tøede", "har tøet"]
+  },
+  {
+    "de": "bewölkt, wolkig",
+    "da": "overskyet",
+    "typ": "adjektiv",
+    "formen": []
+  },
+  {
+    "de": "blitzen",
+    "da": "at lyne",
+    "typ": "verb",
+    "formen": ["at lyne", "lyner", "lynede", "har lynet"]
+  },
+  {
+    "de": "windiges Wetter",
+    "da": "blæsevejr",
+    "typ": "substantiv",
+    "formen": ["blæsevejr", "blæsevejret"]
+  },
+  {
+    "de": "Sturm, stürmisches Wetter",
+    "da": "stormvejr",
+    "typ": "substantiv",
+    "formen": ["stormvejr", "stormvejret"]
+  },
+  {
+    "de": "Tauwetter",
+    "da": "tøvejr",
+    "typ": "substantiv",
+    "formen": ["tøvejr", "tøvejret"]
+  },
+  {
+    "de": "Frostwetter",
+    "da": "frostvejr",
+    "typ": "substantiv",
+    "formen": ["frostvejr", "frostvejret"]
+  },
+  {
+    "comment": "--- Sektion 3: Verkehr ---",
+    "de": null, "da": null, "formen": null
+  },
+  {
+    "de": "Verkehrsmeldung",
+    "da": "trafikmelding",
+    "typ": "substantiv",
+    "formen": ["trafikmelding", "trafikmeldingen", "trafikmeldinger", "trafikmeldingerne"]
+  },
+  {
+    "de": "Verkehr",
+    "da": "trafik",
+    "typ": "substantiv",
+    "formen": ["trafik", "trafikken"]
+  },
+  {
+    "comment": "--- Sektion 4: Risiko, Straße ---",
+    "de": null, "da": null, "formen": null
+  },
+  {
+    "de": "Risiko für",
+    "da": "risiko for",
+    "typ": "substantiv",
+    "formen": ["risiko", "risikoen"]
+  },
+  {
+    "de": "Strecke",
+    "da": "strækning",
+    "typ": "substantiv",
+    "formen": ["strækning", "strækningen", "strækninger", "strækningerne"]
+  },
+  {
+    "de": "Baustelle",
+    "da": "vejarbejde",
+    "typ": "substantiv",
+    "formen": ["vejarbejde", "vejarbejdet", "vejarbejder", "vejarbejderne"]
+  },
+  {
+    "de": "Geschwindigkeitsbegrenzung",
+    "da": "hastighedsbegrænsning",
+    "typ": "substantiv",
+    "formen": ["hastighedsbegrænsning", "hastighedsbegrænsningen", "hastighedsbegrænsninger", "hastighedsbegrænsningerne"]
+  },
+  {
+    "de": "Spur",
+    "da": "spor",
+    "typ": "substantiv",
+    "formen": ["spor", "sporet", "spor", "sporene"]
+  },
+  {
+    "de": "zu Fuß",
+    "da": "til fods",
+    "typ": "sonstig",
+    "formen": []
+  },
+  {
+    "de": "sehr glatt",
+    "da": "meget glat",
+    "typ": "sonstig",
+    "formen": []
+  },
+  {
+    "de": "Stau",
+    "da": "kø",
+    "typ": "substantiv",
+    "formen": ["kø", "køen", "køer", "køerne"]
+  },
+  {
+    "de": "wenige",
+    "da": "få",
+    "typ": "sonstig",
+    "formen": []
+  },
+  {
+    "de": "Teilnehmer, Teilnehmerin",
+    "da": "deltager",
+    "typ": "substantiv",
+    "formen": ["deltager", "deltageren", "deltagere", "deltagerne"]
+  },
+  {
+    "comment": "--- Sektion 5: Wettervorhersage ---",
+    "de": null, "da": null, "formen": null
+  },
+  {
+    "de": "Wetteraussicht",
+    "da": "vejrudsigt",
+    "typ": "substantiv",
+    "formen": ["vejrudsigt", "vejrudsigte", "vejrudsigter", "vejrudsigterne"]
+  },
+  {
+    "de": "Sturmwarnung",
+    "da": "stormvarsel",
+    "typ": "substantiv",
+    "formen": ["stormvarsel", "stormvarslet", "stormvarsler", "stormvarslerne"]
+  },
+  {
+    "de": "mäßig",
+    "da": "moderat",
+    "typ": "adjektiv",
+    "formen": []
+  },
+  {
+    "de": "hart, stark",
+    "da": "hård",
+    "typ": "adjektiv",
+    "formen": []
+  },
+  {
+    "de": "schwach",
+    "da": "svag",
+    "typ": "adjektiv",
+    "formen": []
+  },
+  {
+    "de": "Windstärke",
+    "da": "vindstyrke",
+    "typ": "substantiv",
+    "formen": ["vindstyrke", "vindstyrken", "vindstyrker", "vindstyrkerne"]
+  },
+  {
+    "de": "Wind",
+    "da": "vind",
+    "typ": "substantiv",
+    "formen": ["vind", "vinden", "vinde", "vindene"]
+  },
+  {
+    "de": "Tag, vierundzwanzig Stunden",
+    "da": "døgn",
+    "typ": "substantiv",
+    "formen": ["døgn", "døgnet", "døgn", "døgnene"]
+  },
+  {
+    "de": "im Laufe des Tages",
+    "da": "i løbet af dagen",
+    "typ": "sonstig",
+    "formen": []
+  },
+  {
+    "de": "Schauer",
+    "da": "byge",
+    "typ": "substantiv",
+    "formen": ["byge", "byget", "byger", "bygerne"]
+  },
+  {
+    "de": "Tagestemperatur",
+    "da": "dagstemperatur",
+    "typ": "substantiv",
+    "formen": ["dagstemperatur", "dagstemperaturen", "dagstemperaturer", "dagstemperaturerne"]
+  },
+  {
+    "de": "westlich",
+    "da": "vestlig",
+    "typ": "adjektiv",
+    "formen": []
+  },
+  {
+    "de": "Gegend",
+    "da": "egn",
+    "typ": "substantiv",
+    "formen": ["egn", "egnen", "egne", "egnene"]
+  },
+  {
+    "de": "vermutlich, voraussichtlich",
+    "da": "sandsynligvis",
+    "typ": "sonstig",
+    "formen": []
+  },
+  {
+    "de": "trocken",
+    "da": "tør",
+    "typ": "adjektiv",
+    "formen": []
+  },
+  {
+    "de": "Richtung",
+    "da": "retning",
+    "typ": "substantiv",
+    "formen": ["retning", "retningen", "retninger", "retningerne"]
+  }
+]
