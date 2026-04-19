@@ -16,10 +16,9 @@ Ausgabe:
     daenisch_lektion14_15.mp3
 
 Aufbau jedes Eintrags:
-    1. Deutsches Wort
-    2. Dänisches Wort (normal)
-    3. Dänisches Wort (langsam)
-    4. Alle Wortformen (Kasus/Konjugation)
+    Substantive:  deutsches Wort → Singular, bestimmter Singular, Plural, bestimmter Plural
+    Verben:       deutsches Wort → Grundform, Präsens, Präteritum, Perfekt
+    Sonstige:     deutsches Wort → dänisches Wort (normal + langsam)
 """
 
 import json
@@ -43,7 +42,7 @@ VOKABELN_FILE = "vokabeln.json"
 OUTPUT_FILE   = "daenisch_lektion14_15.mp3"
 
 PAUSE_KURZ    = 700   # ms – zwischen Formen
-PAUSE_MITTEL  = 1100  # ms – zwischen DE und DA
+PAUSE_MITTEL  = 1100  # ms – nach deutschem Wort
 PAUSE_LANG    = 1900  # ms – nach jedem Vokabel-Block
 
 # ── Hilfsfunktionen ────────────────────────────────────────────────────────────
@@ -65,7 +64,6 @@ def stille(ms: int) -> AudioSegment:
 # ── Hauptprogramm ──────────────────────────────────────────────────────────────
 
 def main():
-    # Vokabeln laden
     if not os.path.exists(VOKABELN_FILE):
         sys.exit(f"Fehler: '{VOKABELN_FILE}' nicht gefunden. "
                  "Bitte beide Dateien im selben Ordner ablegen.")
@@ -88,25 +86,25 @@ def main():
     for i, eintrag in enumerate(vokabeln, 1):
         de     = eintrag["de"]
         da     = eintrag["da"]
+        typ    = eintrag.get("typ", "sonstig")
         formen = eintrag.get("formen") or []
 
-        print(f"[{i:3}/{len(vokabeln)}]  {de}  ->  {da}")
+        print(f"[{i:3}/{len(vokabeln)}]  {de}  ->  {da}  ({typ})")
 
         # 1. Deutsches Wort
         audio += tts(de, "de")
         audio += stille(PAUSE_MITTEL)
 
-        # 2. Dänisches Wort – normal
-        audio += tts(da, "da")
-        audio += stille(PAUSE_KURZ)
-
-        # 3. Dänisches Wort – langsam
-        audio += tts(da, "da", slow=True)
-        audio += stille(PAUSE_KURZ)
-
-        # 4. Wortformen
-        for form in formen:
-            audio += tts(form, "da")
+        if typ in ("substantiv", "verb") and formen:
+            # Direkt alle Formen nacheinander – kein separates Grundwort davor
+            for form in formen:
+                audio += tts(form, "da")
+                audio += stille(PAUSE_KURZ)
+        else:
+            # Adjektive, Adverbien, feste Ausdrücke: dänisches Wort normal + langsam
+            audio += tts(da, "da")
+            audio += stille(PAUSE_KURZ)
+            audio += tts(da, "da", slow=True)
             audio += stille(PAUSE_KURZ)
 
         audio += stille(PAUSE_LANG)
