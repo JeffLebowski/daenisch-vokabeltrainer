@@ -5,7 +5,7 @@ Voraussetzungen:
     pip install gtts pydub
 
 Außerdem wird ffmpeg benötigt:
-    - Windows: https://ffmpeg.org/download.html  (ffmpeg.exe in PATH oder ins Skript-Verzeichnis)
+    - Windows: https://ffmpeg.org/download.html
     - Mac:     brew install ffmpeg
     - Linux:   sudo apt install ffmpeg
 
@@ -16,9 +16,10 @@ Ausgabe:
     daenisch_lektion14_15.mp3
 
 Aufbau jedes Eintrags:
-    Substantive:  deutsches Wort → Singular, bestimmter Singular, Plural, bestimmter Plural
-    Verben:       deutsches Wort → Grundform, Präsens, Präteritum, Perfekt
-    Sonstige:     deutsches Wort → dänisches Wort (normal + langsam)
+    Substantive:  deutsch → Form1 … [1s Denkpause zwischen Formen]
+    Verben:       deutsch → Grundform, Präsens, Präteritum, Perfekt [1s Denkpause]
+    Adjektive:    deutsch → Grundform [1s Denkpause] → -t Form → -e Form
+    Sonstige:     deutsch → dänisch (normal + langsam)
 """
 
 import json
@@ -41,14 +42,14 @@ except ImportError:
 VOKABELN_FILE = "vokabeln.json"
 OUTPUT_FILE   = "daenisch_lektion14_15.mp3"
 
-PAUSE_KURZ    = 700   # ms – zwischen Formen
-PAUSE_MITTEL  = 1100  # ms – nach deutschem Wort
-PAUSE_LANG    = 1900  # ms – nach jedem Vokabel-Block
+PAUSE_KURZ      = 700   # ms – zwischen Formen (nach Lösung)
+PAUSE_DENKEN    = 1000  # ms – Denkpause vor nächster Form
+PAUSE_MITTEL    = 1100  # ms – nach deutschem Wort
+PAUSE_LANG      = 1900  # ms – nach jedem Vokabel-Block
 
 # ── Hilfsfunktionen ────────────────────────────────────────────────────────────
 
 def tts(text: str, lang: str, slow: bool = False) -> AudioSegment:
-    """Synthetisiert Text mit gTTS und gibt ein AudioSegment zurück."""
     tmp = tempfile.NamedTemporaryFile(suffix=".mp3", delete=False)
     tmp.close()
     try:
@@ -61,25 +62,31 @@ def tts(text: str, lang: str, slow: bool = False) -> AudioSegment:
 def stille(ms: int) -> AudioSegment:
     return AudioSegment.silent(duration=ms)
 
+def formen_mit_denkpause(formen: list, audio: AudioSegment) -> AudioSegment:
+    """Spielt erste Form, dann Denkpause, dann restliche Formen mit kurzer Pause dazwischen."""
+    for idx, form in enumerate(formen):
+        audio += tts(form, "da")
+        if idx == 0:
+            audio += stille(PAUSE_DENKEN)   # Denkpause nach erster Form
+        else:
+            audio += stille(PAUSE_KURZ)     # kurze Pause nach weiteren Formen
+    return audio
+
 # ── Hauptprogramm ──────────────────────────────────────────────────────────────
 
 def main():
     if not os.path.exists(VOKABELN_FILE):
-        sys.exit(f"Fehler: '{VOKABELN_FILE}' nicht gefunden. "
-                 "Bitte beide Dateien im selben Ordner ablegen.")
+        sys.exit(f"Fehler: '{VOKABELN_FILE}' nicht gefunden.")
 
     with open(VOKABELN_FILE, encoding="utf-8") as f:
         alle = json.load(f)
 
-    # Nur echte Einträge (keine Kommentarzeilen)
     vokabeln = [e for e in alle if e.get("de") and e.get("da")]
 
     print(f"Starte Audio-Generierung: {len(vokabeln)} Vokabeln ...")
     print("(Das kann je nach Internetverbindung einige Minuten dauern.)\n")
 
     audio = stille(500)
-
-    # Intro
     audio += tts("Dänisch Vokabeltraining. Lektion vierzehn und fünfzehn.", "de")
     audio += stille(PAUSE_LANG)
 
@@ -95,13 +102,27 @@ def main():
         audio += tts(de, "de")
         audio += stille(PAUSE_MITTEL)
 
-        if typ in ("substantiv", "verb") and formen:
-            # Direkt alle Formen nacheinander – kein separates Grundwort davor
-            for form in formen:
-                audio += tts(form, "da")
+        if typ == "substantiv" and formen:
+            # Singular [Denkpause] bestimmter Singular [kurz] Plural [kurz] bestimmter Plural
+            audio = formen_mit_denkpause(formen, audio)
+
+        elif typ == "verb" and formen:
+            # Grundform [Denkpause] Präsens [kurz] Präteritum [kurz] Perfekt
+            audio = formen_mit_denkpause(formen, audio)
+
+        elif typ == "adjektiv":
+            # Grundform [Denkpause] -t Form [kurz] -e Form
+            if formen:
+                audio = formen_mit_denkpause(formen, audio)
+            else:
+                # Adjektiv ohne Formen in JSON: Grundwort normal + langsam
+                audio += tts(da, "da")
                 audio += stille(PAUSE_KURZ)
+                audio += tts(da, "da", slow=True)
+                audio += stille(PAUSE_KURZ)
+
         else:
-            # Adjektive, Adverbien, feste Ausdrücke: dänisches Wort normal + langsam
+            # Sonstige: dänisch normal + langsam, keine Denkpause
             audio += tts(da, "da")
             audio += stille(PAUSE_KURZ)
             audio += tts(da, "da", slow=True)
@@ -109,7 +130,6 @@ def main():
 
         audio += stille(PAUSE_LANG)
 
-    # Export
     print(f"\nSpeichere '{OUTPUT_FILE}' ...")
     audio.export(OUTPUT_FILE, format="mp3", bitrate="128k")
 
